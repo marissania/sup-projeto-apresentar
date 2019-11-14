@@ -1,0 +1,73 @@
+
+  #login-dp .help-block{
+    font-size:12px    
+  }
+  #login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+  }
+  #login-dp .social-buttons{
+    margin:12px 0    
+  }
+  #login-dp .social-buttons a{
+    width: 49%;
+  }
+  #login-dp .form-group {
+    margin-bottom: 10px;
+  }
+  .btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+  }
+  .btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+  }
+  .btn-tw{
+    color: #fff;
+    background-color:#55acee;
+  }
+  .btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+  }
+  @media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+  }
+  .dropdown-menu-center {
+      left: 50% !important;
+      right: auto !important;
+      text-align: center !important;
+     
+      
+    }
+  
+    .dropdown-menu {
+        border: 0;
+        padding: 0;
+    }
+    .login{
+      border: 2px solid #355471; 
+      border-radius: 2px; 
+      -webkit-border-radius: 0px; 
+      padding: 5px; 
+      color: #355471; 
+      text-decoration: none;
+      -webkit-box-shadow: -5px 5px 0px 0px rgba(53,84,113,1);
+      -moz-box-shadow: -5px 5px 0px 0px rgba(53,84,113,1);
+      box-shadow: -5px 5px 0px 0px rgba(53,84,113,1);
+    }
+  
+    .line{
+      width:100%;
+    }
+  

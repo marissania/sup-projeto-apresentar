@@ -1,0 +1,20 @@
+.mat-toolbar {
+  color: #fff;
+  width: 500px;
+  position: absolute;
+  top:1px;
+  background-color: rgba(255,255,255,0.0);
+}
+
+.log{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(10,23,55,0.5);
+}
+
+.mat-menu-content{
+  padding: 10px;
+}

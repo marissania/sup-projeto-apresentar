@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container w-75">
+            <a class="navbar-brand" href="#"><img src="../assets/imgs/Logo_SUP.png" height="100" width="150"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><fa-icon icon="home" ></fa-icon>Home <span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><fa-icon icon="book-reader"></fa-icon>O SUP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><fa-icon icon="hospital"></fa-icon>Hospitais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><fa-icon icon="info" ></fa-icon>Serviços</a>
+                </li>
+              </ul>
+            </div>
+      
+
+            <div fxLayout="column" >              
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="login" data-toggle="dropdown"><b>Login</b><fa-icon icon="users"></fa-icon></a>
+                <ul id="login-dp" class="dropdown-menu dropdown-menu-center mt-3">
+                  <li>
+                    <div class="row">
+                        <div class="col-md-12">
+                                <div fxLayoutAlign="center" fxLayout="row">
+                                  <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" >                               
+                                    <mat-card class="login-card mat-elevation-z8" >
+                                        <mat-card-title>Login</mat-card-title>
+                                        <mat-card-content fxLayout="column" *ngIf="!loading">
+                                          <mat-form-field  class="form-group">
+                                            <input matInput formControlName="email" type="email"
+                                                placeholder="email" autocomplete="email" readonly="false">
+                                          </mat-form-field>
+                                          <mat-form-field>
+                                            <input matInput formControlName="password" type="password"  
+                                              placeholder="Password" autocomplete="password">
+                                          </mat-form-field>
+                                        </mat-card-content>
+                                        <mat-card-actions >
+                                          <div fxLayout="row" fxLayoutAlign="space-between center">
+                                            <button mat-button color="warn" (click)="loginGoogle()"  type="button" [disabled]="loading" >Google Login</button>
+                                            <button mat-button color="primary" type="submit" [disabled]="!loginForm.valid || loading"><mat-icon>check</mat-icon>Login</button>
+                                            <!--button mat-button color="accent" routerLink="/auth/forgot"><mat-icon>lock_open</mat-icon><u> ESQUECI A SENHA</u></button-->
+                                          </div>
+                                        </mat-card-actions>
+                                      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+                                      <div class="bottom text-center line">
+                                      
+                                          <button mat-button routerLink="/auth/register">Novo aqui ?<mat-icon>person_add</mat-icon>&nbsp;  <b>Se inscreva</b></button>
+                                        </div> 
+                                    </mat-card>
+                                  </form>                               
+                                </div>
+                        </div>                  
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+      
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown pl-2">
+                  <a href="#" class="login" data-toggle="dropdown"><b>Doutor</b><fa-icon icon="user-md"></fa-icon></a>
+                  <ul id="login-dp" class="dropdown-menu dropdown-menu-center mt-3">
+                    <li>
+                      <div class="row">
+                          <div class="col-md-12">
+                            <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()" >                               
+                              <mat-card class="login-card mat-elevation-z8" >
+                                  <mat-card-title>Login</mat-card-title>
+                                  <mat-card-content fxLayout="column" *ngIf="!loading">
+                                    <mat-form-field  class="form-group">
+                                      <input matInput formControlName="email" type="email"
+                                          placeholder="email" autocomplete="email" readonly="false">
+                                    </mat-form-field>
+                                    <mat-form-field>
+                                      <input matInput formControlName="password" type="password"  
+                                        placeholder="Password" autocomplete="password">
+                                    </mat-form-field>
+                                  </mat-card-content>
+                                  <mat-card-actions >
+                                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                                      <button mat-button color="warn" (click)="loginGoogle()"  type="button" [disabled]="loading" >Google Login</button>
+                                      <button mat-button color="primary" type="submit" [disabled]="!loginForm.valid || loading"><mat-icon>check</mat-icon>Login</button>
+                                      <!--button mat-button color="accent" routerLink="/auth/forgot"><mat-icon>lock_open</mat-icon><u> ESQUECI A SENHA</u></button-->
+                                    </div>
+                                  </mat-card-actions>
+                                <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+                                <div class="bottom text-center line">                                 
+                                    <button mat-button routerLink="/auth/register">Novo aqui ?<mat-icon>person_add</mat-icon>&nbsp;  <b>Se inscreva</b></button>
+                                  </div> 
+                              </mat-card>
+                            </form>                   
+                          </div>                           
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+        </div>
+</nav>
+      

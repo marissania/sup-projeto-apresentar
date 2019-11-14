@@ -1,0 +1,118 @@
+
+    <div class="template_pediatria" style="background-image:url('../assets/imgs/pacientes.jpg')">
+      <div class="container w-75">
+        <p class="col-sx-12 col-sm-12 col-md-12">Seja Bem-vindo!</p>
+      </div>
+    </div>
+
+    <div id="nav-top">
+      <div class="container w-75">
+        <div class="menu_doctor">
+            <ul>
+                <li><a style="font-weight: 900; color:#355471;" href="#">Início</a></li>
+                <li><a routerLink="/auth/prontuario">Consultar Prontuário</a></li>
+                <li><a routerLink="/auth/paciente">Criar Novo Paciente</a></li>
+                <li><a routerLink="#">Cartão de Vacina</a></li>
+                <li><a routerLink="#">Novo Cartão de Vacina</a></li>
+              </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pag_doctor">
+        <div class="container w-75">
+          <div class="row">
+            <div class="class=col-xs-12 col-sm-12 col-md-7">
+              <h1>Confira exames e vacinas disponibilizado pelo Ministério da Saúde.</h1>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-7">
+              <article>
+                <p style="text-align: justify;">
+                  Todos os exames liberados pelo Ministério da Saúde você encontra aqui, de A a Z.<br>
+                  Faça agora sua busca. Digite o nome do exame ou clique na letra inicial.
+                </p>
+              </article>
+              <div id="search-exames">
+                <div class="search-simples clearfix">
+                    <form id="form-search" class="ng-pristine ng-valid">
+                      <input id="field-search" placeholder="Digite o nome do exame ou vacina">
+                    </form>
+                    <button class="button-blue">
+                      <a href="#">Buscar</a>
+                    </button>
+                </div>
+
+                <div id="search-filter" class="clearfix">
+                      <img src="../assets/imgs/homefunc-icons/documento.png">
+                      <h2>Ou clique abaixo para pesquisar exame ou vacina:</h2>
+                </div>
+
+                <div class="search-alfabeto clearfix">
+                    <table>
+                      <tr>
+                        <td><a href="#">#</a></td>
+                        <td><a href="#">A</a></td>
+                        <td><a href="#">B</a></td>
+                        <td><a href="#">C</a></td>
+                        <td><a href="#">D</a></td>
+                        <td><a href="#">E</a></td>
+                        <td><a href="#">F</a></td>
+                        <td><a href="#">G</a></td>
+                        <td><a href="#">H</a></td>
+                        <td><a href="#">I</a></td>
+                        <td><a href="#">J</a></td>
+                        <td><a href="#">K</a></td>
+                        <td><a href="#">L</a></td>
+                        <td><a href="#">M</a></td>
+                        <td><a href="#">N</a></td>
+                        <td><a href="#">O</a></td>
+                        <td><a href="#">P</a></td>
+                        <td><a href="#">Q</a></td>
+                        <td><a href="#">R</a></td>
+                        <td><a href="#">S</a></td>
+                        <td><a href="#">T</a></td>
+                        <td><a href="#">U</a></td>
+                        <td><a href="#">V</a></td>
+                        <td><a href="#">W</a></td>
+                        <td><a href="#">X</a></td>
+                        <td><a href="#">Y</a></td>
+                        <td><a href="#">Z</a></td>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-4">
+              <div id="calendar-lateral">
+                <div class="widgets-titulo_right clearfix">
+                  <img src="../assets/imgs/homefunc-icons/calendario.png">
+                  <h5>Calendário</h5>
+                </div>
+                <mat-form-field class="example-full-width">
+                    <input matInput [matDatepicker]="picker" placeholder="Escolha a data">
+                    <mat-datepicker-toggle matSuffix [for]="picker">
+                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="div-pagination"></div>
+    </div>
+
+
+    <div id="footer-content">
+        <div class="container w-75">
+          <p>
+            <span class="copyright">© 2019 <a href="#">Sistema Único de Pediatria.</a></span>
+            <span id="developers" class="copyright">Web Designer <a href="#">Johnatan C.</a> Programadoras <a href="#">MARISSANIA R., EVANY D.</a></span>
+          </p>
+        </div>
+    </div>
+
+    
+  
+  

@@ -1,0 +1,189 @@
+<div id="grad"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  
+        <div class="container w-75">
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+
+                
+
+            <a class="navbar-brand" href="#"><img src="../assets/imgs/Logo_SUP.png" height="100" width="150"></a>
+      <button mat-button routerLink="/auth/prontuario">&nbsp;Consultar Prontuario</button>
+      <button mat-button routerLink="/auth/homefuncionario">&nbsp; Página Funcionário</button>
+      <button mat-button routerLink="">&nbsp; Página Inicial</button>
+    
+      </div>
+        </div>
+  </nav>
+
+                
+
+
+
+
+
+
+<div  fxLayout="row" fxLayoutAlign="space-around center" >
+  <div align="center" fxLayout="row" fxLayoutAlign="center center"  class="register-form">
+
+    <form role="form" [formGroup]="pacienteForm" (ngSubmit)="onSubmit()">
+      
+
+<mat-card style="width: 1000px;">
+  <mat-tab-group mat-align-tabs = "center" >
+      <mat-tab style="width: 50%;">
+        <ng-template mat-tab-label>
+           <em></em> Dados da Criança
+        </ng-template>
+        <h1>Identificação</h1>
+
+       
+        <div class="example-container">
+          <br><br><br>
+            <mat-form-field>
+              <input matInput type="text" formControlName="nomecrianca"
+              autocomplete="nomecrianca" placeholder="Nome da criança">
+            </mat-form-field>
+          </div> 
+
+
+          <div class="example-container">
+              <mat-form-field>
+                <input matInput type="text" formControlName="localnasc" 
+                autocomplete="localnasc" placeholder="Local de Nascimento">
+              </mat-form-field>
+            </div> 
+
+  
+            <div class="example-container">
+                <mat-form-field>
+                  <input matInput type="text" formControlName="nomemae" 
+                  autocomplete="nomemae" placeholder="Nome da mãe">
+                </mat-form-field>
+             
+                <mat-form-field>
+                  <textarea matInput type="text" formControlName="nomepai" 
+                  autocomplete="nomepai" placeholder="Nome do pai"></textarea>
+                </mat-form-field>
+                      
+                <mat-form-field>
+                    <textarea matInput type="text" formControlName="endereco" 
+                    autocomplete="endereco" placeholder="Endereço"></textarea>
+                  </mat-form-field>   
+              </div>
+         
+
+              <div fxLayout="row" fxLayoutAlign="space-between stretch">
+  
+                  <mat-form-field fxFlex="45">
+                      <input matInput type="text" formControlName="ptrefe" 
+                      autocomplete="ptrefe" placeholder="Ponto de referencia">
+                    </mat-form-field>     
+  
+                    <mat-form-field fxFlex="45">
+                        <input [textMask]="{mask: mask}" matInput type="text" formControlName="telefone" 
+                        autocomplete="telefone" placeholder="Telefone">
+                      </mat-form-field>     
+                </div>
+
+                <div fxLayout="row" fxLayoutAlign="space-between stretch">
+  
+                    <mat-form-field fxFlex="45">
+                        <input matInput type="text" formControlName="bairro" 
+                        autocomplete="bairro" placeholder="Bairro">
+                      </mat-form-field>     
+    
+                      <mat-form-field fxFlex="45">
+                          <input matInput type="text" formControlName="cep" 
+                          autocomplete="cep" placeholder="Cep">
+                        </mat-form-field>     
+                  </div>
+
+                  <div fxLayout="row" fxLayoutAlign="space-between stretch">
+  
+                      <mat-form-field fxFlex="45">
+                          <input matInput type="text" formControlName="cidade" 
+                          autocomplete="cidade" placeholder="Cidade">
+                        </mat-form-field>     
+      
+                          <mat-form-field  fxFlex="15">
+                              <mat-select matNativeControl="estado"  placeholder="Estados" type="text" formControlName="estado"  >
+                                <mat-option *ngFor="let estado of estado" [value]="estado" >
+                                  {{estado}}
+                                </mat-option>
+                              </mat-select>
+                            </mat-form-field>  
+                    </div>
+                    
+                    <br>
+  
+
+                   
+                    <div  fxLayout="row" fxLayoutAlign="space-around stretch" >
+                        <mat-list-item> Raça/Cor </mat-list-item>
+                        <mat-radio-group aria-label="Select an option" fxFlex="100" formControlName="raca">
+                            <mat-radio-button value="branca" style="margin-right: 27px;">Branca</mat-radio-button >
+                            <mat-radio-button value="preta" style="margin-right: 27px;">Preta</mat-radio-button>
+                            <mat-radio-button value="amarela" style="margin-right: 27px;">Amarela</mat-radio-button>
+                            <mat-radio-button value="parda" style="margin-right: 27px;">Parda</mat-radio-button>
+                            <mat-radio-button value="indigena" style="margin-right: 27px;">Indigena</mat-radio-button>
+                        
+                          </mat-radio-group> 
+                      </div>
+                      <br><br>
+
+           <div class="example-container">
+                <mat-form-field>
+                  <input matInput formControlName="ubf" 
+                  autocomplete="ubf" placeholder="Unidade Básica de Referência:">
+                </mat-form-field>     
+                <mat-form-field>
+                  <textarea matInput formControlName="npubs" 
+                  autocomplete="npubs" placeholder="Nº do Prontuário na UBS:"></textarea>
+                </mat-form-field>         
+                <mat-form-field>
+                    <textarea matInput formControlName="ndnv" 
+                    autocomplete="ndnv" placeholder="Nº da Declaração de Nascido Vivo:"></textarea>
+                  </mat-form-field> 
+                  <mat-form-field>
+                      <textarea matInput formControlName="nrcn" 
+                      autocomplete="nrcn" placeholder="Nº do Registro Civil de Nascimento:"></textarea>
+                    </mat-form-field>      
+                    <mat-form-field>
+                        <textarea matInput formControlName="ncsus" 
+                        autocomplete="ncsus" placeholder="Nº do Cartão do SUS:
+                        "></textarea>
+                      </mat-form-field>   
+              </div>
+
+
+              <div fxLayout="row" fxLayoutAlign="end end" >
+                  <button mat-button color="primary" type="submit" >
+                    <mat-icon>done</mat-icon>&nbsp;Cadastrar
+                  </button>
+              </div>
+      
+
+
+        
+      </mat-tab>
+      
+      
+ 
+
+    </mat-tab-group>
+
+    
+
+  </mat-card> 
+    </form>
+  </div>
+</div>
+
+
+
+

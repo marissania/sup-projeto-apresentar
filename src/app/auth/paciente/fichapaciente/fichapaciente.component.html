@@ -1,0 +1,233 @@
+
+<div id="grad"></div>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <div class="container w-75">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+
+            
+
+        <a class="navbar-brand" href="#"><img src="../assets/imgs/Logo_SUP.png" height="100" width="150"></a>
+  
+  </div>
+    </div>
+</nav>
+
+
+
+
+<div class="edit-page">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Editar Usuário</li>
+    </ol>
+  </nav>
+  <div class="page-content">
+    <div class="row">
+     
+      <div class="col col-md-10">
+        <form class="edit-form" [formGroup]="pacienteForm" novalidate (ngSubmit)="onSubmit(pacienteForm.value)">
+            <mat-card style="width: 1000px;">
+
+
+                <div class="form-group">
+                    <mat-form-field class="input-style">
+                      <input matInput placeholder="Nome da criança" class="form-control" formControlName="nomecrianca">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.nomecrianca">
+                      <mat-error *ngIf="pacienteForm.get('nomecrianca').hasError(validation.type) && (pacienteForm.get('nomecrianca').dirty || pacienteForm.get('nomecrianca').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                  </div>
+
+
+                  <div class="form-group">
+                    <mat-form-field class="input-style">
+                      <input matInput placeholder="Local de Nascimento" class="form-control" formControlName="localnasci">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.localnasci">
+                      <mat-error *ngIf="pacienteForm.get('localnasci').hasError(validation.type) && (pacienteForm.get('localnasci').dirty || pacienteForm.get('localnasci').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                  </div>
+
+
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput placeholder="Nome da Mãe" class="form-control" formControlName="nomemae">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.nomemae">
+              <mat-error *ngIf="pacienteForm.get('nomemae').hasError(validation.type) && (pacienteForm.get('nomemae').dirty || pacienteForm.get('nomemae').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+
+          <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput placeholder="Nome do Pai" class="form-control" formControlName="nomepai">
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.nomepai">
+                <mat-error *ngIf="pacienteForm.get('nomepai').hasError(validation.type) && (pacienteForm.get('nomepai').dirty || pacienteForm.get('nomepai').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+
+
+            <div class="form-group">
+                <mat-form-field class="input-style">
+                  <input matInput placeholder="Endereço" class="form-control" formControlName="endereco">
+                </mat-form-field>
+                <ng-container *ngFor="let validation of validation_messages.endereco">
+                  <mat-error *ngIf="pacienteForm.get('endereco').hasError(validation.type) && (pacienteForm.get('endereco').dirty || pacienteForm.get('endereco').touched)">{{validation.message}}</mat-error>
+                </ng-container>
+              </div>
+    
+
+              <div fxLayout="row" fxLayoutAlign="space-between stretch">
+                  <mat-form-field class="input-style" fxFlex="45" >
+                      <input matInput placeholder="Ponto de Refêrencia" class="form-control" formControlName="ptrefe">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.ptrefe">
+                      <mat-error *ngIf="pacienteForm.get('ptrefe').hasError(validation.type) && (pacienteForm.get('ptrefe').dirty || pacienteForm.get('ptrefe').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+                    <mat-form-field class="input-style" fxFlex="45" >
+                        <input [textMask]="{mask: mask}" matInput placeholder="Telefone" class="form-control" formControlName="telefone">
+                      </mat-form-field>
+                      <ng-container *ngFor="let validation of validation_messages.telefone">
+                        <mat-error *ngIf="pacienteForm.get('telefone').hasError(validation.type) && (pacienteForm.get('telefone').dirty || pacienteForm.get('telefone').touched)">{{validation.message}}</mat-error>
+                      </ng-container>
+              </div>
+
+
+       
+
+              <div fxLayout="row" fxLayoutAlign="space-between stretch">
+                  <mat-form-field class="input-style" fxFlex="45" >
+                      <input matInput placeholder="Bairro" class="form-control" formControlName="bairro">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.bairro">
+                      <mat-error *ngIf="pacienteForm.get('bairro').hasError(validation.type) && (pacienteForm.get('bairro').dirty || pacienteForm.get('bairro').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+      
+                  <mat-form-field class="input-style" fxFlex="45" >
+                      <input  matInput placeholder="Cep" class="form-control" formControlName="cep">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.cep">
+                      <mat-error *ngIf="pacienteForm.get('cep').hasError(validation.type) && (pacienteForm.get('cep').dirty || pacienteForm.get('cep').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+              </div>
+
+              <div fxLayout="row" fxLayoutAlign="space-between stretch">
+                  <mat-form-field class="input-style" fxFlex="45" >
+                      <input matInput placeholder="Cidade" class="form-control" formControlName="cidade">
+                    </mat-form-field>
+                    <ng-container *ngFor="let validation of validation_messages.cidade">
+                      <mat-error *ngIf="pacienteForm.get('cidade').hasError(validation.type) && (pacienteForm.get('cidade').dirty || pacienteForm.get('cidade').touched)">{{validation.message}}</mat-error>
+                    </ng-container>
+      
+                    <mat-form-field class="input-style" fxFlex="45" >
+                        <mat-select matNativeControl="estado"  placeholder="Estados" type="text" class="form-control" formControlName="estado"  >
+                            <mat-option *ngFor="let estado of estado" [value]="estado" >
+                              {{estado}}
+                            </mat-option>
+                          </mat-select>
+                      </mat-form-field>
+                      <ng-container *ngFor="let validation of validation_messages.cidade">
+                        <mat-error *ngIf="pacienteForm.get('cidade').hasError(validation.type) && (pacienteForm.get('cidade').dirty || pacienteForm.get('cidade').touched)">{{validation.message}}</mat-error>
+                      </ng-container>
+                
+              </div>
+
+
+
+              <br><br>
+              <div  fxLayout="row" fxLayoutAlign="space-around stretch" >
+                  <mat-list-item style="margin-right: 60px;"> Raça/Cor </mat-list-item>
+                  <mat-radio-group aria-label="Select an option" fxFlex="110" formControlName="raca">
+                      <mat-radio-button value="branca" style="margin-right: 40px;">Branca</mat-radio-button >
+                      <mat-radio-button value="preta" style="margin-right: 40px;">Preta</mat-radio-button>
+                      <mat-radio-button value="amarela" style="margin-right: 40px;">Amarela</mat-radio-button>
+                      <mat-radio-button value="parda" style="margin-right: 40px;">Parda</mat-radio-button>
+                      <mat-radio-button value="indigena" style="margin-right: 40px;">Indigena</mat-radio-button>
+                    </mat-radio-group> 
+                    <ng-container *ngFor="let validation of validation_messages.raca">
+                        <mat-error *ngIf="pacienteForm.get('raca').hasError(validation.type) && (pacienteForm.get('raca').dirty || pacienteForm.get('raca').touched)">{{validation.message}}</mat-error>
+                      </ng-container>
+                </div>
+
+                <br><br>
+
+
+
+          <div class="form-group">
+            <mat-form-field class="input-style">
+              <input matInput type="number" min="0" max="100" placeholder="Unidade Básica de Refêrencia" class="form-control" formControlName="ubf">
+            </mat-form-field>
+            <ng-container *ngFor="let validation of validation_messages.ubf">
+              <mat-error *ngIf="pacienteForm.get('ubf').hasError(validation.type) && (pacienteForm.get('ubf').dirty || pacienteForm.get('ubf').touched)">{{validation.message}}</mat-error>
+            </ng-container>
+          </div>
+
+          
+          <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput type="number" min="0" max="100" placeholder="Nº do Prontuário na UBS:" class="form-control" formControlName="npubs">
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.npubs">
+                <mat-error *ngIf="pacienteForm.get('npubs').hasError(validation.type) && (pacienteForm.get('npubs').dirty || pacienteForm.get('npubs').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+
+            
+            
+          <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput type="number" min="0" max="100" placeholder="Nº da Declaração de Nascido Vivo:" class="form-control" formControlName="ndnv">
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.ndnv">
+                <mat-error *ngIf="pacienteForm.get('ndnv').hasError(validation.type) && (pacienteForm.get('ndnv').dirty || pacienteForm.get('ndnv').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+
+            
+            
+          <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput type="number" min="0" max="100" placeholder="Nº do Registro Civil de Nascimento:" class="form-control" formControlName="nrcn">
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.nrcn">
+                <mat-error *ngIf="pacienteForm.get('nrcn').hasError(validation.type) && (pacienteForm.get('nrcn').dirty || pacienteForm.get('nrcn').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+
+            
+            
+          <div class="form-group">
+              <mat-form-field class="input-style">
+                <input matInput type="number" min="0" max="100" placeholder="Nº do Cartão do SUS:" class="form-control" formControlName="ncsus">
+              </mat-form-field>
+              <ng-container *ngFor="let validation of validation_messages.ncsus">
+                <mat-error *ngIf="pacienteForm.get('ncsus').hasError(validation.type) && (pacienteForm.get('ncsus').dirty || pacienteForm.get('ncsus').touched)">{{validation.message}}</mat-error>
+              </ng-container>
+            </div>
+  
+
+    
+
+          <div class="row submit-button-container">
+            <div class="col-md-4">
+              <button mat-raised-button class="submit-button" color="primary" type="submit" [disabled]="!pacienteForm.valid">Salvar</button>
+            </div>
+            <div class="col-md-4">
+              <button mat-raised-button class="delete-button" color="warn" type="button" (click)="delete()">Excluir</button>
+            </div>
+          </div>
+            </mat-card>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

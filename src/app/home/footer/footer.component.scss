@@ -1,0 +1,252 @@
+$link-light-grey: #6c757d;
+$footer-background-light-grey: #212529;
+$footer-background-grey: #1a1d20;
+
+.section-informacoes{
+  padding-top:40px;
+  padding-bottom: 40px;
+} 
+
+.row > h1{
+  width:100%
+}
+
+.section-title{
+  color: #355471;
+  font-size: 40px;
+  font-variant: small-caps;
+  text-align: center;
+  font-weight: 200;
+}
+
+.section-title:after{
+  background-color: #638eb6;
+    content: "";
+    display: block;
+    height: 3px;
+    margin: 25px auto 40px;
+    width: 73px;
+
+}
+
+.regular-text{
+  color: #818181;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.icon-inf{
+  border-radius:50%;
+  border:1px solid #638eb6;
+  height: 113px;
+  margin: 0 auto;
+  position: relative;
+  width: 113px;
+}
+
+.icon-inf > img{
+  left: 50%;
+  max-width: 90%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.col-md-3 > h2 {
+  margin-top: 20px;
+  opacity: 1;
+  font-size: 16px;
+  font-weight: 700;
+  color: #638eb6;
+  
+}
+
+.saiba-mais {
+  font-size: 13px;
+  color:#638eb6;
+  line-height: 30px;
+  font-family: Roboto-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: Montserrat,sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.saiba-mais:hover{
+  text-decoration: underline;
+}
+
+a {
+  color: $link-light-grey;
+}
+
+footer {
+  padding: 2rem 0;
+  // .container .row:not(:last-child) {
+  //   padding-bottom: 2rem;
+  // }
+}
+
+.footer-logo{
+    width:150px;
+    height:100px;
+}
+.footer-column:not(:first-child) {
+    padding-top: 2rem;
+    @media (min-width: 768px) {
+      padding-top: 0rem;
+    }
+  }
+
+.footer-column {
+  text-align: center;
+  .nav-item {
+      margin-bottom: 10px;
+    .nav-link {
+      padding: 0.1rem 0;
+    }
+    span.nav-link {
+      color: $link-light-grey;
+    }
+    span.footer-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: black;
+      text-transform: uppercase;
+    }
+    .fas {
+      margin-right: 0.5rem;
+    }
+  }
+  ul {
+    display: inline-block;
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+}
+
+
+.row-group {
+  margin-top: 45px;
+  margin-bottom: 52px;
+}
+.row-group ul {
+  list-style: none;
+  padding:0;
+}
+
+.row-group h5 {
+  font-family: BentonSans-Regular,Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  color: #88909b;
+  margin-bottom: 8px;
+}
+
+.row-group a{
+  font-family: Roboto-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  color: #88909b;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.row-group a:hover{
+  font-family: Roboto-Regular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  color: #355471;
+  line-height: 22px;
+  text-decoration: underline #355471; 
+}
+
+fa-icon{
+ margin-right:10px;
+ float:left;
+ color: #88909b;
+}
+
+.col-md-6{
+  float:left;
+}
+.col-md-3{
+  float:left;
+}
+
+footer{
+  height:491px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.rede{
+  width: 35px;
+  height: 35px;
+  float: left;
+  transition: all 0.4s ease-out;
+  border-radius: 50%;
+  margin-right:10px;
+  padding-left:10px;
+  padding-top:5px;
+  background-color:#88909b;
+ }
+ 
+ .rede:hover{
+  cursor: pointer;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 8px 0px rgba(50,50,50, 0.45);
+ }
+ 
+ .rede#facebook:hover{
+  background-color: #2372a3;
+ 
+ }
+ .rede#twitter:hover{
+  background-color: #0084b4;
+ }
+ .rede#instagram:hover{
+  background-color: #da405f;
+ }
+
+ .rede#youtube:hover{
+  background-color: #8B0000;
+ }
+
+ .icone{
+  width:15px;
+  height:15px;
+ }
+ 
+ #footer-content{
+  border: 0;
+  border-top: 1px solid #eee;
+  padding:10px;
+ }
+
+ #footer-content p{
+	height:20px;
+	margin: 0 auto;
+	overflow: hidden;
+	text-transform: uppercase; 
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 13px; 
+	color: #747474;
+}
+
+.copyright a {font-weight: 800;}
+
+#footer-content a { 
+	color: #747474; 
+	margin-right: 1em; 
+	text-decoration: none;
+}
+
+#developers{
+	float:right;
+}
+ 
+#div-pagination{
+  height:100px;
+}
